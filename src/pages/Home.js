@@ -1,13 +1,15 @@
-import React, { useState } from "react";
-import { Box } from "@mui/material";
+import React, { useState } from 'react';
+import { Box } from '@mui/material';
 
-import Exercises from "../components/Exercises";
-import HeroBanner from "../components/HeroBanner";
-import SearchExercises from "../components/SearchExercises";
+import Exercises from '../components/Exercises';
+import HeroBanner from '../components/HeroBanner';
+import SearchExercises from '../components/SearchExercises';
 
 const Home = () => {
-  const [bodyPart, setBodyPart] = useState("all");
+  const [bodyPart, setBodyPart] = useState('all');
   const [exercises, setExercises] = useState([]);
+
+  console.log(bodyPart);
 
   return (
     <Box>
@@ -20,8 +22,8 @@ const Home = () => {
 
       <Exercises
         setExercises={setExercises}
+        exercises={exercises}
         bodyPart={bodyPart}
-        setBodyPart={setBodyPart}
       />
     </Box>
   );
